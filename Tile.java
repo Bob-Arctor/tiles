@@ -1,0 +1,19 @@
+
+public class Tile
+{
+	//private int x;
+	//private int y;
+	private int r;	//rank
+	
+	public Tile(int rank) {
+		r = rank;
+	}
+	
+	public int rank (Tile theTile) {
+		return r;
+	}
+	
+	public String toString (Tile theTile) {
+		String str = "Tile number " + theTile.rank();
+		return str;
+}
