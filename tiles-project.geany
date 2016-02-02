@@ -21,10 +21,15 @@ indent_mode=2
 [project]
 name=tiles-project
 base_path=D:\\Documents\\Coding\\Java\\tiles\\
+description=
 
 [long line marker]
 long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
+current_page=1
+FILE_NAME_0=286;Java;0;EUTF-8;1;1;0;D%3A%5CDocuments%5CCoding%5CJava%5Ctiles%5CTile.java;0;4
+FILE_NAME_1=264;Java;0;EUTF-8;1;1;0;D%3A%5CDocuments%5CCoding%5CJava%5Ctiles%5CMain.java;0;4
+FILE_NAME_2=96;Java;0;EUTF-8;1;1;0;D%3A%5CDocuments%5CCoding%5CJava%5Ctiles%5CTileView.java;0;4
+FILE_NAME_3=216;Java;0;EUTF-8;1;1;0;D%3A%5CDocuments%5CCoding%5CJava%5Ctiles%5CTilePanel.java;0;4

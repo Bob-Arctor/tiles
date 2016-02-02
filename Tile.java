@@ -9,11 +9,12 @@ public class Tile
 		r = rank;
 	}
 	
-	public int rank (Tile theTile) {
+	public int rank () {
 		return r;
 	}
 	
 	public String toString (Tile theTile) {
 		String str = "Tile number " + theTile.rank();
 		return str;
+	}
 }
