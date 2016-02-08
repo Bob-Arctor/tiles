@@ -7,7 +7,18 @@ public class TilePanel {
 	//ArrayList of Tiles
 	private ArrayList<Tile> tileList;
 	//number of tiles
-	private int nTiles; 
+	private int nTiles;
+	//list of borders
+	private final List<Integer> borderPos = new ArrayList<Integer>() {{
+		add(0);
+		add(4);
+		add(8);
+		add(12);
+		add(3);
+		add(7);
+		add(11);
+		add(15);
+	}}; 
 	
 	//constructor
 	public TilePanel(int numberOfTiles) {
@@ -55,5 +66,40 @@ public class TilePanel {
 	public void shuffle()
 	{
 		Collections.shuffle(tileList);
+	}
+	
+	public bool puzzleCompleted(){
+		for (int i = 0; i < tileList.size(); i++)
+		{
+			if (tileList.get(i).rank() != i) 
+			{	return false;	}
+			return true;
+			
+		}
+	}
+	
+	//check if numbers are across the border
+	public bool checkBorder(int a, int b) {
+		return borderPos.contains(a) && borderPos.contains(b);
+	}
+	
+	//tile can be moved if -1, 1, -4, 4 is empty
+	//and it's not at the border.
+	public bool canMoveTile( Tile aTile) {
+		switch abs(findPositionByRank(aTile.rank())-findEmptyTile())
+		{
+			case 1:
+				if (!checkBorder(findPositionByRank(aTile.rank()), 
+					findEmptyTile())) {	return true; }
+				else { return false;	}
+				break;
+			case 4:
+				return true;
+				break;
+			default:
+			return false;
+				
+		}
+		
 	}
 }
