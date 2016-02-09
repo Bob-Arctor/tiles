@@ -17,4 +17,15 @@ public class Tile
 		String str = "Tile number " + theTile.rank();
 		return str;
 	}
+	
+	public boolean isEmptyTile() {
+		if (rank()==15)
+		{
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 }
